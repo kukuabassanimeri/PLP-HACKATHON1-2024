@@ -1,0 +1,134 @@
+<!-- 1. create the basic html structure. your structure should include a blue heading and a red paragragh with font size 15px -->
+
+
+<!-- 2. in your html file, add a link that opens a new tab to an external resource  -->
+
+
+<!-- 3. create a section and add an image, using css; place a green border on the image, the image should be 500px wide and 500px high -->
+
+
+<!-- 4. create another section add a form that takes in the following input:
+  a. name
+  b. email address
+  c. phone number
+  d. age
+  e. radio checkbox for gender (use fieldset to group the gender input)
+  f. dropdown for multi-selection of subjects: English, Math, Science, Art and Craft, Agriculture, Geography and History
+  g. password
+  h. a hidden field to capture sessionId
+  i. cancel button that clears form inputs
+  j. submit button with text register
+  make sure to incorporate relevant labels in your form elements using the necessary and relevant input types and element attributes
+-->
+
+<!-- 5. all styling should be placed in the style.css, make sure to correctly embed the external css file on the index.html file using the relevant tag  -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Plp Hackathon</title>
+  <link rel="stylesheet" href="style.css"> </head>
+<body>
+  <!--Header section-->
+  <header>
+    <h1 class="heading">Plp Web Technologies First Hackathon 2024</h1>
+  </header>
+
+
+  <main>
+    <!--Paragraph section-->
+    <p class="paragraph">This is the first Plp Web Technologies hackathon. <br>This hackathon is meant to test the students on their skills and <br> knowledge learnt for the first month when they joined plp. <br>Therefore I am glad to be among the chosen individuals to be part of plp students cohort 4.  
+    </p>
+
+    <!--Image section-->
+    <section class="image-section">
+      <h2>Abass's Portriat</h2>
+      <img src="coder.jpg" alt="An image of me while writing codes" class="image"> 
+      <figcaption>Abass, full-stack enthusiast</figcaption>
+    </section>
+
+    <!--Form Section-->
+    <section class="form-section">
+      <h2>Registration Form</h2>
+      <form id="registration-form">
+
+        <div class="form-group">
+          <label for="name">Name </label>
+          <br>
+          <input type="text" id="name" name="name" placeholder="Type your name">
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email Address </label>
+          <br>
+          <input type="email" id="email" name="email" placeholder="Type your email">
+        </div>
+
+
+        <div class="password">
+          <label for="password">Password</label>
+          <br>
+          <input type="password" id="password" name="password" required placeholder="Type your password">
+        </div>
+
+        <div class="form-group">
+          <label for="phone">Phone Number</label>
+          <br>
+          <input type="tel" id="phone" name="phone" required placeholder="Type your phone number">
+        </div>
+
+        <div class="form-group">
+          <label for="age">Age</label>
+          <br>
+          <input type="number" id="age" name="age" required placeholder="Type your age">
+        </div>
+
+        <fieldset>
+          <legend>Gender</legend>
+          <div class="form-group">
+            <input type="radio" id="male" name="gender" value="male" required>
+            <label for="male">Male</label>
+          </div>
+
+          <div class="form-group">
+            <input type="radio" id="female" name="gender" value="female" required>
+            <label for="female">Female</label>
+          </div>
+
+        </fieldset>
+
+        <div class="subjects">
+          <label for="subjects">Subjects </label>
+          <br>
+
+          <select id="subjects" name="subjects[]" multiple required>
+            <option value="English">English</option>
+            <option value="Math">Math</option>
+            <option value="Science">Science</option>
+            <option value="Art & Craft">Art & Craft</option>
+            <option value="Agriculture">Agriculture</option>
+            <option value="Geography">Geography</option>
+            <option value="History">History</option>
+          </select>
+
+        </div>
+        
+        
+        <input type="hidden" name="sessionId" value="your_session_id">
+        <div class="button">
+          <button type="reset" name="reset" >Cancel</button>
+          <br>
+          <br>
+          <button type="submit" name="submit">Submit</button>
+        </div>
+      </form>
+    </section>
+    <h2>Link</h2>
+      <a href="https://github.com/kukuabassanimeri/web-technologies-level-1-hackathon" target="_blank" rel="noopener">web-technologies hackathon</a>  
+   
+  </main>
+</body>
+</html>
